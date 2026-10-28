@@ -1,0 +1,6 @@
+# robots.txt para SP SoftTechnology
+User-agent: *
+Allow: /
+
+# El sitemap se habilita con la URL canónica una vez configurado el dominio oficial de producción (PUBLIC_SITE_URL).
+

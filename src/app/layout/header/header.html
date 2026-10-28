@@ -1,0 +1,91 @@
+<header class="site-header">
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <div class="container header-container">
+    <a routerLink="/" class="brand-link" (click)="closeMenu()" aria-label="SP SoftTechnology - Inicio">
+      <svg class="brand-logo" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true" fill="none">
+        <rect width="36" height="36" rx="8" fill="#0D1226"/>
+        <path d="M10 12C10 10.8954 10.8954 10 12 10H24C25.1046 10 26 10.8954 26 12V15C26 16.1046 25.1046 17 24 17H15C13.8954 17 13 17.8954 13 19V22C13 23.1046 13.8954 24 15 24H24C25.1046 24 26 24.8954 26 26V26C26 27.1046 25.1046 28 24 28H12C10.8954 28 10 27.1046 10 26V12Z" fill="#4F46E5"/>
+        <circle cx="26" cy="13.5" r="2.5" fill="#A5B4FC"/>
+        <circle cx="10" cy="22.5" r="2.5" fill="#A5B4FC"/>
+      </svg>
+      <span class="brand-text">SP SoftTechnology</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        @for (item of navItems; track item.path) {
+          <li class="nav-item">
+            <a
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+              class="nav-link"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <a routerLink="/flow" class="btn btn--primary header-cta">
+        Conocer Flow
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        [attr.aria-expanded]="isMenuOpen()"
+        aria-controls="mobile-navigation"
+        [attr.aria-label]="isMenuOpen() ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+        (click)="toggleMenu()"
+      >
+        <span class="hamburger-bar" [class.open]="isMenuOpen()"></span>
+        <span class="hamburger-bar" [class.open]="isMenuOpen()"></span>
+        <span class="hamburger-bar" [class.open]="isMenuOpen()"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <nav
+    id="mobile-navigation"
+    class="mobile-nav"
+    [class.open]="isMenuOpen()"
+    aria-label="Navegación móvil"
+    [attr.aria-hidden]="!isMenuOpen()"
+  >
+    <div class="container mobile-nav-content">
+      <ul class="mobile-nav-list">
+        @for (item of navItems; track item.path) {
+          <li class="mobile-nav-item">
+            <a
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+              class="mobile-nav-link"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+
+      <div class="mobile-nav-actions">
+        <a routerLink="/flow" class="btn btn--primary w-full" (click)="closeMenu()">
+          Conocer Flow
+        </a>
+        <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp w-full">
+          Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+

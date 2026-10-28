@@ -1,0 +1,181 @@
+<main id="contenido-principal" class="site-main">
+  <!-- Page Header -->
+  <section class="page-hero" aria-labelledby="flow-page-title">
+    <div class="container text-center">
+      <span class="badge badge--dark">Primer producto de {{ companyName }}</span>
+      <h1 id="flow-page-title" class="page-title">
+        Flow: Control total de tus reservas, colaboradores y clientes
+      </h1>
+      <p class="page-subtitle">
+        Una plataforma ágil y moderna que simplifica la operación de tu negocio, sin procesos complicados para ti ni para tus clientes.
+      </p>
+      <div class="hero-actions">
+        <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <path d="M12.031 0C5.399 0 0 5.398 0 12.029c0 2.217.604 4.304 1.656 6.108L0 24l5.99-1.572c1.748.97 3.754 1.527 5.889 1.527 6.634 0 12.033-5.399 12.033-12.03C23.912 5.399 18.665 0 12.031 0zm-.152 21.848c-1.859 0-3.605-.512-5.12-1.408l-.367-.216-3.805.998 1.016-3.71-.237-.378c-.991-1.577-1.517-3.411-1.517-5.305 0-5.467 4.453-9.92 9.932-9.92 5.479 0 9.93 4.453 9.93 9.92 0 5.468-4.451 9.919-9.832 9.919zm5.426-7.433c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.569-.347z"/>
+          </svg>
+          <span>Solicitar demostración por WhatsApp</span>
+        </a>
+        <a routerLink="/precios" class="btn btn--secondary-dark">
+          Consultar planes
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Capabilities Section -->
+  <section class="section" aria-labelledby="capabilities-title">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge">Funcionalidades centrales</span>
+        <h2 id="capabilities-title" class="section-title">
+          Qué hace Flow por tu negocio
+        </h2>
+        <p class="section-subtitle">
+          Herramientas enfocadas en resolver las necesidades operativas reales de tu jornada diaria.
+        </p>
+      </div>
+
+      <div class="flow-features-flex">
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Gestión de reservas</h3>
+          <p class="feature-box-desc">
+            Agenda centralizada e interactiva. Controla el flujo de clientes a lo largo del día, previniendo solapamientos y tiempos muertos entre citas.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Reconocimiento por teléfono</h3>
+          <p class="feature-box-desc">
+            Los clientes reservan sin crear una cuenta con contraseña. El sistema los reconoce automáticamente mediante su número de teléfono.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Colaboradores y horarios</h3>
+          <p class="feature-box-desc">
+            Administra a tu equipo de trabajo: asigna turnos, días de descanso y vincula qué servicios específicos puede realizar cada miembro.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Catálogo de servicios</h3>
+          <p class="feature-box-desc">
+            Estructura los servicios ofrecidos con tiempos estimados de atención para calcular automáticamente la duración de cada cita.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Soporte multisucursal</h3>
+          <p class="feature-box-desc">
+            Organiza las citas de una o más sedes dentro del mismo entorno de trabajo, manteniendo los equipos y servicios ordenados por ubicación.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="feature-box-title">Gestión de suscripción</h3>
+          <p class="feature-box-desc">
+            Administra de forma clara el plan de uso de tu negocio, con soporte comercial y acompañamiento directo de SP SoftTechnology.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clear Scope Section -->
+  <section class="section scope-clarification-section" aria-labelledby="scope-title">
+    <div class="container">
+      <div class="scope-card">
+        <h2 id="scope-title" class="scope-title">
+          Transparencia y alcance del producto
+        </h2>
+        <p class="scope-intro">
+          En <strong>SP SoftTechnology</strong> creemos en una comunicación honesta con nuestros clientes. Flow está diseñado para sobresalir en la organización de reservas, agendas, colaboradores y clientes:
+        </p>
+        <div class="scope-flex">
+          <div class="scope-column in-scope">
+            <h3 class="scope-col-title">Incluido en Flow</h3>
+            <ul class="scope-list">
+              <li>Agenda y control de reservas en tiempo real.</li>
+              <li>Reconocimiento de clientes por número de teléfono.</li>
+              <li>Registro de colaboradores y sus horarios laborales.</li>
+              <li>Catálogo de servicios y tiempos de atención.</li>
+              <li>Gestión de sucursales del establecimiento.</li>
+              <li>Administración de la suscripción del negocio.</li>
+            </ul>
+          </div>
+          <div class="scope-column out-scope">
+            <h3 class="scope-col-title">Fuera del alcance actual</h3>
+            <ul class="scope-list">
+              <li>Módulo de inventario y punto de venta (POS).</li>
+              <li>Facturación electrónica.</li>
+              <li>Cobro de anticipos o depósitos en línea.</li>
+              <li>Fichas clínicas o consentimientos especializados.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="final-cta-section" aria-labelledby="flow-cta-title">
+    <div class="container text-center">
+      <h2 id="flow-cta-title" class="final-cta-title">
+        ¿Listo para simplificar las reservas de tu negocio?
+      </h2>
+      <p class="final-cta-desc">
+        Escríbenos directamente por WhatsApp y te asesoramos según las necesidades de tu establecimiento.
+      </p>
+      <div class="final-cta-actions">
+        <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <path d="M12.031 0C5.399 0 0 5.398 0 12.029c0 2.217.604 4.304 1.656 6.108L0 24l5.99-1.572c1.748.97 3.754 1.527 5.889 1.527 6.634 0 12.033-5.399 12.033-12.03C23.912 5.399 18.665 0 12.031 0zm-.152 21.848c-1.859 0-3.605-.512-5.12-1.408l-.367-.216-3.805.998 1.016-3.71-.237-.378c-.991-1.577-1.517-3.411-1.517-5.305 0-5.467 4.453-9.92 9.932-9.92 5.479 0 9.93 4.453 9.93 9.92 0 5.468-4.451 9.919-9.832 9.919zm5.426-7.433c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.569-.347z"/>
+          </svg>
+          <span>Escribir al WhatsApp comercial</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+

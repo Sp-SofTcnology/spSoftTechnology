@@ -1,0 +1,63 @@
+<main id="contenido-principal" class="site-main">
+  <!-- About Hero -->
+  <section class="page-hero text-center" aria-labelledby="about-hero-title">
+    <div class="container">
+      <span class="badge badge--dark">Propósito y visión</span>
+      <h1 id="about-hero-title" class="page-title">
+        Construimos tecnología con un propósito: resolver problemas reales.
+      </h1>
+      <p class="page-subtitle">
+        En {{ companyName }} creemos que la tecnología debe ser útil, accesible y estar diseñada alrededor de las necesidades reales de cada negocio.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Narrative Section -->
+  <section class="section" aria-labelledby="mission-title">
+    <div class="container">
+      <div class="about-card-narrative">
+        <h2 id="mission-title" class="narrative-title">
+          Nuestro enfoque de trabajo
+        </h2>
+        <div class="narrative-body">
+          <p>
+            En <strong>{{ companyName }}</strong> entendemos que los negocios pequeños y medianos no necesitan software sobrecargado ni procesos que requieran semanas de capacitación. Necesitan herramientas prácticas que hagan una tarea de manera excelente: ahorrar tiempo, prevenir confusiones y dar orden al día a día.
+          </p>
+          <p>
+            <strong>Flow</strong> es nuestro primer producto comercial y el punto de partida de una propuesta enfocada en simplificar tareas, mejorar la organización y acompañar el crecimiento de empresas en los sectores de belleza, cuidado personal y bienestar.
+          </p>
+          <p>
+            Nuestros principios de desarrollo priorizan la confiabilidad del sistema, la claridad en las interfaces para usuarios de cualquier nivel técnico y la transparencia total en el alcance y costos de cada solución.
+          </p>
+        </div>
+
+        <div class="pillars-flex">
+          <div class="pillar-box">
+            <h3 class="pillar-title">Simplicidad operacional</h3>
+            <p class="pillar-desc">Diseñamos soluciones que se entienden en minutos, sin curvas de aprendizaje frustrantes.</p>
+          </div>
+
+          <div class="pillar-box">
+            <h3 class="pillar-title">Accesibilidad práctica</h3>
+            <p class="pillar-desc">Plataformas pensadas para personas reales, operables desde cualquier dispositivo moderno.</p>
+          </div>
+
+          <div class="pillar-box">
+            <h3 class="pillar-title">Acompañamiento cercano</h3>
+            <p class="pillar-desc">Atención humana y directa a través de canales oficiales para resolver dudas operativas.</p>
+          </div>
+        </div>
+
+        <div class="about-cta text-center">
+          <a routerLink="/flow" class="btn btn--primary">
+            Conocer Flow
+          </a>
+          <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

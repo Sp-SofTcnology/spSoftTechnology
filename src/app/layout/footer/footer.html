@@ -1,0 +1,70 @@
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-top">
+      <!-- Brand & Mission Column -->
+      <div class="footer-brand-col">
+        <a routerLink="/" class="footer-brand" aria-label="SP SoftTechnology - Inicio">
+          <svg class="brand-logo" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true" fill="none">
+            <rect width="36" height="36" rx="8" fill="#1E293B"/>
+            <path d="M10 12C10 10.8954 10.8954 10 12 10H24C25.1046 10 26 10.8954 26 12V15C26 16.1046 25.1046 17 24 17H15C13.8954 17 13 17.8954 13 19V22C13 23.1046 13.8954 24 15 24H24C25.1046 24 26 24.8954 26 26V26C26 27.1046 25.1046 28 24 28H12C10.8954 28 10 27.1046 10 26V12Z" fill="#4F46E5"/>
+            <circle cx="26" cy="13.5" r="2.5" fill="#A5B4FC"/>
+            <circle cx="10" cy="22.5" r="2.5" fill="#A5B4FC"/>
+          </svg>
+          <span class="footer-brand-name">{{ companyName }}</span>
+        </a>
+        <p class="footer-tagline">
+          Construimos tecnología con un propósito: resolver problemas reales. Desarrollamos soluciones de software modernas y accesibles para la operación de negocios independientes.
+        </p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Navegación</h3>
+        <ul class="footer-list">
+          @for (item of navItems; track item.path) {
+            <li>
+              <a [routerLink]="item.path" class="footer-link">{{ item.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Legal e Información</h3>
+        <ul class="footer-list">
+          <li>
+            <a routerLink="/politica-de-privacidad" class="footer-link">Política de Privacidad</a>
+          </li>
+          <li>
+            <a routerLink="/terminos" class="footer-link">Términos y Condiciones</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-contact-col">
+        <h3 class="footer-heading">Contacto Comercial</h3>
+        <p class="footer-contact-desc">
+          ¿Tienes dudas sobre Flow o deseas una demostración para tu negocio?
+        </p>
+        <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp footer-whatsapp-btn">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <path d="M12.031 0C5.399 0 0 5.398 0 12.029c0 2.217.604 4.304 1.656 6.108L0 24l5.99-1.572c1.748.97 3.754 1.527 5.889 1.527 6.634 0 12.033-5.399 12.033-12.03C23.912 5.399 18.665 0 12.031 0zm-.152 21.848c-1.859 0-3.605-.512-5.12-1.408l-.367-.216-3.805.998 1.016-3.71-.237-.378c-.991-1.577-1.517-3.411-1.517-5.305 0-5.467 4.453-9.92 9.932-9.92 5.479 0 9.93 4.453 9.93 9.92 0 5.468-4.451 9.919-9.832 9.919zm5.426-7.433c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.569-.347z"/>
+          </svg>
+          <span>WhatsApp: +57 {{ whatsappNumber }}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {{ currentYear }} {{ companyName }}. Todos los derechos reservados.
+      </p>
+      <p class="footer-clarification">
+        Flow es una marca comercial de {{ companyName }}.
+      </p>
+    </div>
+  </div>
+</footer>
+

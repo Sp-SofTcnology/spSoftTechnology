@@ -1,0 +1,97 @@
+<main id="contenido-principal" class="site-main">
+  <!-- Contact Hero -->
+  <section class="page-hero text-center" aria-labelledby="contact-hero-title">
+    <div class="container">
+      <span class="badge badge--dark">Canal oficial de atención</span>
+      <h1 id="contact-hero-title" class="page-title">
+        Hablemos sobre la gestión de tu negocio
+      </h1>
+      <p class="page-subtitle">
+        Atención personalizada y directa para asesorarte sobre Flow y responder tus consultas comerciales.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Body Section -->
+  <section class="section" aria-labelledby="contact-channel-title">
+    <div class="container">
+      <div class="contact-card-main">
+        <div class="contact-direct-info">
+          <span class="badge">Atención rápida</span>
+          <h2 id="contact-channel-title" class="contact-info-title">
+            Canal oficial: WhatsApp Comercial
+          </h2>
+          <p class="contact-info-text">
+            En <strong>{{ companyName }}</strong> gestionamos todas nuestras consultas comerciales directamente por WhatsApp para brindarte agilidad sin esperas ni formularios que se queden sin respuesta.
+          </p>
+          <div class="contact-phone-badge">
+            <span class="phone-label">Número de WhatsApp (Colombia):</span>
+            <span class="phone-number">+57 {{ whatsappNumber }}</span>
+          </div>
+          <div class="contact-actions-top">
+            <a [href]="defaultWhatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <path d="M12.031 0C5.399 0 0 5.398 0 12.029c0 2.217.604 4.304 1.656 6.108L0 24l5.99-1.572c1.748.97 3.754 1.527 5.889 1.527 6.634 0 12.033-5.399 12.033-12.03C23.912 5.399 18.665 0 12.031 0zm-.152 21.848c-1.859 0-3.605-.512-5.12-1.408l-.367-.216-3.805.998 1.016-3.71-.237-.378c-.991-1.577-1.517-3.411-1.517-5.305 0-5.467 4.453-9.92 9.932-9.92 5.479 0 9.93 4.453 9.93 9.92 0 5.468-4.451 9.919-9.832 9.919zm5.426-7.433c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.569-.347z"/>
+              </svg>
+              <span>Abrir chat directo por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-composer-card">
+          <h3 class="composer-title">Personaliza tu consulta antes de escribir</h3>
+          <p class="composer-desc">
+            Selecciona el tipo de tu negocio o ingresa su nombre para preparar el mensaje inicial de manera automática:
+          </p>
+
+          <form class="composer-form" (submit)="$event.preventDefault()">
+            <div class="form-group">
+              <label for="business-type-select" class="form-label">Tipo de negocio:</label>
+              <select
+                id="business-type-select"
+                class="form-control"
+                [value]="selectedBusinessType()"
+                (change)="onTypeChange($event)"
+              >
+                @for (type of businessTypes; track type.id) {
+                  <option [value]="type.id">{{ type.label }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="business-name-input" class="form-label">Nombre de tu negocio (opcional):</label>
+              <input
+                id="business-name-input"
+                type="text"
+                class="form-control"
+                placeholder="Ej. Barbería El Estilo"
+                [value]="businessName()"
+                (input)="onNameChange($event)"
+              />
+            </div>
+
+            <div class="composer-cta">
+              <a
+                [href]="dynamicWhatsappUrl()"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--whatsapp btn--full"
+              >
+                <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M12.031 0C5.399 0 0 5.398 0 12.029c0 2.217.604 4.304 1.656 6.108L0 24l5.99-1.572c1.748.97 3.754 1.527 5.889 1.527 6.634 0 12.033-5.399 12.033-12.03C23.912 5.399 18.665 0 12.031 0zm-.152 21.848c-1.859 0-3.605-.512-5.12-1.408l-.367-.216-3.805.998 1.016-3.71-.237-.378c-.991-1.577-1.517-3.411-1.517-5.305 0-5.467 4.453-9.92 9.932-9.92 5.479 0 9.93 4.453 9.93 9.92 0 5.468-4.451 9.919-9.832 9.919zm5.426-7.433c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.569-.347z"/>
+                </svg>
+                <span>Enviar mensaje personalizado a WhatsApp</span>
+              </a>
+            </div>
+          </form>
+
+          <p class="composer-privacy-note">
+            Nota de transparencia: Esta página no envía datos personales a ningún servidor ni guarda información en tu navegador. El botón abre directamente la aplicación de WhatsApp.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

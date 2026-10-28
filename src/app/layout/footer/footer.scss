@@ -1,0 +1,141 @@
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: #FFFFFF;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.footer-brand-col {
+  flex: 1 1 20rem;
+  max-width: 26rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+
+  &:focus-visible {
+    border-radius: var(--radius-sm);
+  }
+}
+
+.footer-brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #94A3B8;
+}
+
+.footer-links-col {
+  flex: 1 1 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-link {
+  font-size: 0.9375rem;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+
+  &:hover {
+    color: var(--color-lavender);
+  }
+}
+
+.footer-contact-col {
+  flex: 1 1 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact-desc {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #94A3B8;
+}
+
+.footer-whatsapp-btn {
+  align-self: flex-start;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright, .footer-clarification {
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-brand-col {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
